@@ -21,7 +21,7 @@ const port = process.env.PORT || config.get("port");
 
 // declare your callback function the old way
 app.get('/', function (req, res) {
-  res.send('<h1>R endering html page using Express</h1><br> <br>' +
+  res.send('<h1>Rendering html page using Express</h1><br> <br>' +
   '<h2>Welcome to dogs page </h2><br></br>'+
   'Click the below link to find out the list of various dog breeds <br>'+
   '<a href="dogs-page">dog breeds</a>'
