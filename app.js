@@ -12,6 +12,8 @@ const app = express()
 // use Helmet middleware to automatically set secure HTTP headers
 app.use(helmet())
 
+app.use(express.static(path.join(__dirname, 'public')))
+
 // Use hosting values if available, otherwise default 
 const environment = process.env.NODE_ENV || 'development'
 const hostname = process.env.HOSTNAME || config.get("hostname")
@@ -30,8 +32,7 @@ app.get('/', function (req, res) {
 })
 
 app.get('/dogs-page',function(req,res){
-  res.sendFile('/index.html',{root: path.join(__dirname, './')
-})
+  res.sendFile('/index.html')
   //__dirname : It will resolve to your project folder.
 });
 // or use the new arrow function syntax
