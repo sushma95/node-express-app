@@ -32,7 +32,8 @@ app.get('/', function (req, res) {
 })
 
 app.get('/dogs-page',function(req,res){
-  res.sendFile('/index.html')
+  res.sendFile('/index.html',{root: path.join(__dirname, 'public')
+})
   //__dirname : It will resolve to your project folder.
 });
 // or use the new arrow function syntax
